@@ -1,0 +1,8 @@
+{
+  // Cloudflare Worker (static assets) config for GitHub-connected deploys
+  "name": "snowy-bonus-19fe",
+  "compatibility_date": "2025-07-01",
+  "assets": {
+    "directory": "."
+  }
+}
