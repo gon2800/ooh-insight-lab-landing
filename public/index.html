@@ -52,22 +52,22 @@ header{height:72px;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);b
 .live-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:750;color:#9FF5D6;background:rgba(0,208,144,.1);border:1px solid rgba(0,208,144,.24);padding:6px 10px;border-radius:999px;margin-bottom:14px}
 .hero h1{font-size:clamp(19px,5.6vw,36px);line-height:1.2;letter-spacing:-.04em;margin-bottom:14px;white-space:nowrap}
 .hero h1 span{background:linear-gradient(100deg,#65A1FF,#63E2B9);-webkit-background-clip:text;background-clip:text;color:transparent}
-.market-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:4px}
+.market-row{display:flex;gap:9px;flex-wrap:nowrap;margin-top:4px}
 .market-chip{display:flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.055);border-radius:10px;font-size:12px;color:rgba(255,255,255,.72)}
 .market-code{min-width:34px;height:20px;padding:0 7px;border-radius:6px;background:rgba(255,255,255,.1);display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;letter-spacing:.04em;color:#BFE9FF}
 
 .follow-panel{background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.11);border-radius:16px;padding:14px;box-shadow:inset 0 1px rgba(255,255,255,.05)}
 .follow-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;gap:12px}
 .follow-head strong{font-size:14px}
-.channel-row{display:flex;gap:8px;align-items:stretch}
-.chan-btn{flex:0 0 auto;height:42px;padding:0 13px;display:flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:rgba(255,255,255,.06);color:#fff;font-size:12px;font-weight:700;transition:.2s;white-space:nowrap}
-.chan-btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.24);transform:translateY(-1px)}
+.channel-row{display:flex;align-items:stretch;border:1px solid rgba(255,255,255,.14);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.05)}
+.chan-btn{flex:0 0 auto;padding:0 14px;display:flex;align-items:center;gap:7px;background:transparent;color:#fff;font-size:12px;font-weight:700;transition:.2s;white-space:nowrap}
+.chan-btn:hover{background:rgba(255,255,255,.09)}
 .chan-btn svg{width:15px;height:15px;fill:currentColor;flex:0 0 auto}
-.chan-email{flex:1 1 auto;display:flex;gap:6px;min-width:0}
-.chan-email input{flex:1 1 auto;min-width:0;height:42px;padding:0 11px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:rgba(255,255,255,.08);color:#fff;font-size:12px;outline:none}
-.chan-email input::placeholder{color:rgba(255,255,255,.32)}
-.chan-email input:focus{border-color:rgba(0,208,144,.6)}
-.chan-email button{flex:0 0 auto;height:42px;padding:0 15px;border:0;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
+.chan-div{flex:0 0 auto;width:1px;background:rgba(255,255,255,.16)}
+.chan-email{flex:1 1 auto;display:flex;min-width:0}
+.chan-email input{flex:1 1 auto;min-width:0;height:44px;padding:0 12px;border:0;background:transparent;color:#fff;font-size:12px;outline:none}
+.chan-email input::placeholder{color:rgba(255,255,255,.34)}
+.chan-email button{flex:0 0 auto;height:44px;padding:0 16px;border:0;background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
 
 .main{padding:34px 0 70px}
 .main-grid{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:24px;align-items:start}
@@ -98,10 +98,15 @@ header{height:72px;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);b
 .side-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}
 .side-head h3{font-size:13px;letter-spacing:-.02em}
 .side-head span{font-size:10px;color:#98A2B3}
-.search-box{position:relative;margin-bottom:12px}
+.search-box{position:relative;margin-bottom:0;flex:1 1 auto;min-width:0}
 .search-box svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:14px;height:14px;stroke:#98A2B3;fill:none}
 .search-box input{width:100%;height:40px;border:1px solid var(--line);background:#F8FAFC;border-radius:10px;padding:0 12px 0 34px;outline:none;font-size:12px;color:var(--ink)}
 .search-box input:focus{background:white;border-color:#9CB6FF;box-shadow:0 0 0 3px rgba(0,71,255,.07)}
+.search-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.search-row>h3{flex:0 0 auto;font-size:13px;letter-spacing:-.02em;white-space:nowrap}
+.archive-row{display:flex;align-items:center;gap:10px}
+.archive-row>h3{flex:0 0 auto;font-size:13px;letter-spacing:-.02em;white-space:nowrap}
+.archive-row>#archive-dates{flex:1 1 auto;min-width:0}
 .region-btns{display:flex;gap:6px}
 .rfilter-btn{flex:1 1 0;height:38px;border:1px solid var(--line);border-radius:9px;background:#F8FAFC;display:flex;align-items:center;justify-content:center;padding:0;color:#667085;font-size:12px;font-weight:700;cursor:pointer;transition:.18s}
 .rfilter-btn:hover,.rfilter-btn.active{border-color:#AFC2FF;background:#F1F5FF;color:var(--blue)}
@@ -127,7 +132,7 @@ footer{background:#07182F;color:white;padding:28px 0}
 }
 @media(max-width:680px){
   .shell{padding:0 16px}header{height:64px}.header-logo img{display:block;width:257px;height:auto}.btn-inquiry{display:none}
-  .hero{padding:30px 0 26px}.hero-grid{gap:22px}.market-chip{font-size:11px}
+  .hero{padding:30px 0 26px}.hero-grid{gap:22px}.market-row{gap:6px}.market-chip{flex:1 1 0;justify-content:center;padding:7px 4px;gap:4px;font-size:11px}.market-code{min-width:auto;padding:0 5px}
   .follow-panel{padding:12px}
   .follow-head{margin-bottom:9px}
   .follow-head strong{font-size:13px}
@@ -173,10 +178,12 @@ footer{background:#07182F;color:white;padding:28px 0}
           <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           <span class="lbl">Facebook</span>
         </a>
+        <span class="chan-div"></span>
         <a class="chan-btn" href="https://www.linkedin.com/company/133455601" target="_blank" rel="noreferrer" aria-label="LinkedIn 팔로우">
           <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
           <span class="lbl">LinkedIn</span>
         </a>
+        <span class="chan-div"></span>
         <form class="chan-email" onsubmit="handleSubscribe(event)"><input type="email" placeholder="이메일 구독" required><button>구독</button></form>
       </div>
     </div>
@@ -191,8 +198,7 @@ footer{background:#07182F;color:white;padding:28px 0}
     </section>
     <aside class="sidebar">
       <section class="side-card search-card">
-        <div class="side-head"><h3>뉴스 검색</h3><span>키워드·출처·태그</span></div>
-        <div class="search-box"><svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="news-search" type="search" placeholder="예: DOOH, 규제, 미국" oninput="applyFilters()"></div>
+        <div class="search-row"><h3>뉴스 검색</h3><div class="search-box"><svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="news-search" type="search" placeholder="키워드 검색" oninput="applyFilters()"></div></div>
         <div class="region-btns">
           <button class="rfilter-btn active" data-region="all" onclick="setRegion('all',this)">전체</button>
           <button class="rfilter-btn" data-region="kr" onclick="setRegion('kr',this)">국내</button>
@@ -202,8 +208,7 @@ footer{background:#07182F;color:white;padding:28px 0}
         </div>
       </section>
       <section class="side-card" id="archive">
-        <div class="side-head"><h3>뉴스 아카이브</h3><span>일자별 탐색</span></div>
-        <div id="archive-dates"><div class="archive-empty">아카이브를 불러오는 중...</div></div>
+        <div class="archive-row"><h3>뉴스 아카이브</h3><div id="archive-dates"><div class="archive-empty">불러오는 중...</div></div></div>
       </section>
       <section class="side-card about-card" id="about"><h3>About OOH Insight LAB</h3><p>OOH 업계 실무자가 만드는 글로벌 옥외광고 인사이트 플랫폼입니다. AI가 40여 개 소스를 모니터링하고, 실무 관점에서 핵심 정보를 정리합니다.</p></section>
     </aside>
