@@ -1,25 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OOH Insight LAB — 글로벌 옥외광고 인사이트</title>
-<meta name="description" content="AI가 매일 40여 개 글로벌 소스를 모니터링해 한국·미국·유럽·아시아 OOH/DOOH 핵심 뉴스를 선별합니다. 매일 오전 8시 자동 발행.">
-<!-- Open Graph (Facebook/LinkedIn 링크 카드) -->
+<meta name="description" content="AI가 40여 개 글로벌 소스를 모니터링해 한국·미국·유럽·아시아 OOH/DOOH 핵심 뉴스를 선별합니다. 매주 월·수·금 오전 8시 발행.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OOH Insight LAB">
 <meta property="og:title" content="OOH Insight LAB — 글로벌 옥외광고 인사이트">
-<meta property="og:description" content="AI가 매일 40여 개 글로벌 소스를 모니터링해 한국·미국·유럽·아시아 OOH/DOOH 핵심 뉴스를 선별합니다. 매일 오전 8시 자동 발행.">
+<meta property="og:description" content="AI가 40여 개 글로벌 소스를 모니터링해 한국·미국·유럽·아시아 OOH/DOOH 핵심 뉴스를 선별합니다. 매주 월·수·금 오전 8시 발행.">
 <meta property="og:url" content="https://oohinsightlab.com">
 <meta property="og:image" content="https://oohinsightlab.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ko_KR">
-<!-- Twitter/X 카드 -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OOH Insight LAB — 글로벌 옥외광고 인사이트">
-<meta name="twitter:description" content="AI가 매일 40여 개 글로벌 소스를 모니터링해 한국·미국·유럽·아시아 OOH/DOOH 핵심 뉴스를 선별합니다.">
+<meta name="twitter:description" content="AI가 40여 개 글로벌 소스를 모니터링해 한국·미국·유럽·아시아 OOH/DOOH 핵심 뉴스를 선별합니다.">
 <meta name="twitter:image" content="https://oohinsightlab.com/og-image.png">
 <style>
 :root{
@@ -34,7 +31,6 @@ a{text-decoration:none;color:inherit}
 button,input{font:inherit}
 .shell{max-width:1180px;margin:0 auto;padding:0 24px}
 
-/* Header */
 header{height:72px;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(231,234,240,.9);position:sticky;top:0;z-index:100}
 .header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:28px}
 .header-logo{display:flex;align-items:center;flex:0 0 auto}
@@ -48,43 +44,31 @@ header{height:72px;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);b
 .hamburger{display:none;width:40px;height:40px;border:1px solid var(--line);background:white;border-radius:10px;align-items:center;justify-content:center;flex-direction:column;gap:4px}
 .hamburger span{width:17px;height:1.5px;background:#526074;border-radius:4px}
 
-/* Hero */
 .hero{background:
  radial-gradient(circle at 86% 18%,rgba(0,71,255,.18),transparent 28%),
  radial-gradient(circle at 68% 78%,rgba(0,208,144,.12),transparent 26%),
- linear-gradient(135deg,#06172E 0%,#0A2345 58%,#0A2D4C 100%);color:white;padding:30px 0 26px;overflow:hidden}
+ linear-gradient(135deg,#06172E 0%,#0A2345 58%,#0A2D4C 100%);color:white;padding:34px 0 30px;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(400px,.92fr);gap:38px;align-items:center}
-.live-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:750;color:#9FF5D6;background:rgba(0,208,144,.1);border:1px solid rgba(0,208,144,.24);padding:6px 10px;border-radius:999px;margin-bottom:12px}
-
-.hero h1{font-size:34px;line-height:1.18;letter-spacing:-.045em;margin-bottom:10px}
+.live-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:750;color:#9FF5D6;background:rgba(0,208,144,.1);border:1px solid rgba(0,208,144,.24);padding:6px 10px;border-radius:999px;margin-bottom:14px}
+.hero h1{font-size:clamp(19px,5.6vw,36px);line-height:1.2;letter-spacing:-.04em;margin-bottom:14px;white-space:nowrap}
 .hero h1 span{background:linear-gradient(100deg,#65A1FF,#63E2B9);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-copy{font-size:13px;line-height:1.6;color:rgba(255,255,255,.66);max-width:720px;white-space:nowrap}
-.market-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.market-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:4px}
 .market-chip{display:flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.055);border-radius:10px;font-size:12px;color:rgba(255,255,255,.72)}
 .market-code{min-width:34px;height:20px;padding:0 7px;border-radius:6px;background:rgba(255,255,255,.1);display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;letter-spacing:.04em;color:#BFE9FF}
 
-/* Unified subscription channels */
-.follow-panel{background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.11);border-radius:18px;padding:16px;box-shadow:inset 0 1px rgba(255,255,255,.05)}
-.follow-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:14px;gap:12px}
-.follow-head strong{font-size:15px}
-.follow-head span{font-size:11px;color:rgba(255,255,255,.42)}
-.channel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.channel-card{min-height:108px;border:1px solid rgba(255,255,255,.11);border-radius:14px;background:rgba(255,255,255,.055);padding:13px;display:flex;flex-direction:column;justify-content:space-between;transition:.2s;position:relative;overflow:hidden}
-.channel-card:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-46px;top:-45px;background:linear-gradient(135deg,rgba(0,71,255,.25),rgba(0,208,144,.16))}
-.channel-card:hover{transform:translateY(-2px);background:rgba(255,255,255,.085);border-color:rgba(255,255,255,.2)}
-.channel-icon{width:30px;height:30px;border-radius:10px;background:rgba(255,255,255,.11);display:flex;align-items:center;justify-content:center;color:white;position:relative;z-index:1}
-.channel-icon svg{width:16px;height:16px;fill:currentColor}
-.channel-card strong{display:block;font-size:13px;margin-top:8px}
-.channel-card small{display:block;color:rgba(255,255,255,.45);font-size:10px;margin-top:3px}
-.channel-action{font-size:11px;font-weight:750;color:#8DE9CE;margin-top:12px}
-.email-card{grid-column:auto}
-.email-form{display:flex;gap:6px;margin-top:9px;position:relative;z-index:2}
-.email-form input{min-width:0;width:100%;height:32px;padding:0 9px;border:1px solid rgba(255,255,255,.13);border-radius:8px;background:rgba(255,255,255,.08);color:white;font-size:11px;outline:none}
-.email-form input::placeholder{color:rgba(255,255,255,.3)}
-.email-form input:focus{border-color:rgba(0,208,144,.6)}
-.email-form button{height:32px;padding:0 10px;border:0;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;font-size:10px;font-weight:800;cursor:pointer;white-space:nowrap}
+.follow-panel{background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.11);border-radius:16px;padding:14px;box-shadow:inset 0 1px rgba(255,255,255,.05)}
+.follow-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;gap:12px}
+.follow-head strong{font-size:14px}
+.channel-row{display:flex;gap:8px;align-items:stretch}
+.chan-btn{flex:0 0 auto;height:42px;padding:0 13px;display:flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:rgba(255,255,255,.06);color:#fff;font-size:12px;font-weight:700;transition:.2s;white-space:nowrap}
+.chan-btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.24);transform:translateY(-1px)}
+.chan-btn svg{width:15px;height:15px;fill:currentColor;flex:0 0 auto}
+.chan-email{flex:1 1 auto;display:flex;gap:6px;min-width:0}
+.chan-email input{flex:1 1 auto;min-width:0;height:42px;padding:0 11px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:rgba(255,255,255,.08);color:#fff;font-size:12px;outline:none}
+.chan-email input::placeholder{color:rgba(255,255,255,.32)}
+.chan-email input:focus{border-color:rgba(0,208,144,.6)}
+.chan-email button{flex:0 0 auto;height:42px;padding:0 15px;border:0;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
 
-/* Main */
 .main{padding:34px 0 70px}
 .main-grid{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:24px;align-items:start}
 .section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
@@ -101,40 +85,28 @@ header{height:72px;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);b
 .rbadge{font-size:10px;font-weight:800;padding:5px 8px;border-radius:999px}
 .r-kr{background:#EAF3FF;color:#1760B8}.r-us{background:#E9FAF4;color:#087953}.r-eu{background:#FFF4E8;color:#A85B17}.r-asia{background:#F3ECFF;color:#6840B7}
 .csource{font-size:10px;color:#98A2B3;font-weight:650}
-.news-card h3{font-size:15px;line-height:1.48;letter-spacing:-.025em;margin-bottom:9px}
+.news-card h3{font-size:15px;line-height:1.48;letter-spacing:-.025em;margin-bottom:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .news-card p{font-size:12px;line-height:1.72;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .card-foot{margin-top:auto;padding-top:15px;display:flex;align-items:center;justify-content:space-between;gap:10px}
-.ctags{display:flex;gap:5px;flex-wrap:wrap}
-.tag{font-size:9px;font-weight:700;color:#667085;background:#F3F5F8;padding:4px 7px;border-radius:999px}
+.ctags{display:flex;gap:5px;flex-wrap:nowrap;overflow:hidden;min-width:0;flex:1 1 auto}
+.tag{font-size:9px;font-weight:700;color:#667085;background:#F3F5F8;padding:4px 7px;border-radius:999px;white-space:nowrap;flex:0 0 auto}
 .read-arrow{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:14px;flex:0 0 auto}
 .no-news{grid-column:1/-1;text-align:center;padding:50px;background:white;border:1px dashed #D7DCE5;border-radius:16px;color:#98A2B3;font-size:13px}
 
-/* Sidebar */
 .sidebar{display:flex;flex-direction:column;gap:15px;position:sticky;top:92px}
 .side-card{background:white;border:1px solid var(--line);border-radius:16px;padding:17px;box-shadow:0 8px 24px rgba(8,29,58,.035)}
 .side-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}
 .side-head h3{font-size:13px;letter-spacing:-.02em}
 .side-head span{font-size:10px;color:#98A2B3}
-.search-box{position:relative;margin-bottom:13px}
+.search-box{position:relative;margin-bottom:12px}
 .search-box svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:14px;height:14px;stroke:#98A2B3;fill:none}
 .search-box input{width:100%;height:40px;border:1px solid var(--line);background:#F8FAFC;border-radius:10px;padding:0 12px 0 34px;outline:none;font-size:12px;color:var(--ink)}
 .search-box input:focus{background:white;border-color:#9CB6FF;box-shadow:0 0 0 3px rgba(0,71,255,.07)}
-.region-btns{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-.rfilter-btn{height:40px;border:1px solid var(--line);border-radius:10px;background:#F8FAFC;display:flex;align-items:center;gap:7px;padding:0 9px;color:#667085;font-size:12px;font-weight:700;cursor:pointer;transition:.18s}
+.region-btns{display:flex;gap:6px}
+.rfilter-btn{flex:1 1 0;height:38px;border:1px solid var(--line);border-radius:9px;background:#F8FAFC;display:flex;align-items:center;justify-content:center;padding:0;color:#667085;font-size:12px;font-weight:700;cursor:pointer;transition:.18s}
 .rfilter-btn:hover,.rfilter-btn.active{border-color:#AFC2FF;background:#F1F5FF;color:var(--blue)}
-.rcount{margin-left:auto;min-width:21px;height:20px;padding:0 5px;border-radius:999px;background:white;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:9px;color:#98A2B3}
-.archive-links{display:flex;flex-direction:column;gap:8px}
-.archive-link{display:flex;align-items:center;gap:11px;padding:11px;border:1px solid var(--line);border-radius:11px;background:#FBFCFE;transition:.2s}
-.archive-link:hover{border-color:#B6C7FF;background:#F3F6FF;transform:translateX(2px)}
-.aicon{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#EDF3FF,#EAFBF5);display:flex;align-items:center;justify-content:center;font-size:15px}
-.archive-info{min-width:0}
-.archive-info strong{display:block;font-size:12px;margin-bottom:2px}
-.archive-info span{display:block;font-size:10px;color:#98A2B3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.aarrow{margin-left:auto;color:#7B8AA0;font-size:13px}
-#archive-dates{max-height:300px;overflow-y:auto}
-button.archive-link{cursor:pointer;width:100%;text-align:left;font-family:inherit;font-size:inherit}
-.archive-link.active-date{border-color:#0047FF;background:#F3F6FF}
-.archive-link.active-date .archive-info strong{color:#0047FF}
+.archive-select{width:100%;height:42px;border:1px solid var(--line);border-radius:10px;background:#F8FAFC;padding:0 34px 0 12px;font-size:12px;font-weight:650;color:var(--ink);cursor:pointer;outline:none;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237B8AA0' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 12px center}
+.archive-select:focus{background-color:white;border-color:#9CB6FF;box-shadow:0 0 0 3px rgba(0,71,255,.07)}
 .archive-empty{font-size:11px;color:#98A2B3;padding:8px 4px;line-height:1.6}
 .about-card{background:linear-gradient(145deg,#081D3A,#10315A);color:white;border:0;overflow:hidden;position:relative}
 .about-card:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-55px;bottom:-70px;background:linear-gradient(135deg,rgba(0,71,255,.48),rgba(0,208,144,.34))}
@@ -155,36 +127,20 @@ footer{background:#07182F;color:white;padding:28px 0}
 }
 @media(max-width:680px){
   .shell{padding:0 16px}header{height:64px}.header-logo img{display:block;width:257px;height:auto}.btn-inquiry{display:none}
-  .hero{padding:32px 0 28px}.hero h1{font-size:29px}.hero-grid{gap:28px}.market-chip{font-size:11px}
-
-  /* 구독 채널 3개 카드를 컴팩트한 가로 배치로 축소 (기사가 첫 화면에 더 빨리 보이도록) */
-  .follow-panel{padding:13px}
+  .hero{padding:30px 0 26px}.hero-grid{gap:22px}.market-chip{font-size:11px}
+  .follow-panel{padding:12px}
   .follow-head{margin-bottom:9px}
   .follow-head strong{font-size:13px}
-  .follow-head span{display:none}
-  .channel-grid{grid-template-columns:repeat(3,1fr);gap:6px}
-  .channel-card{min-height:auto;padding:8px 5px}
-  .channel-card>div:first-child{display:flex;flex-direction:column;align-items:center;gap:2px}
-  .channel-icon{width:22px;height:22px}
-  .channel-icon svg{width:12px;height:12px}
-  .channel-card strong{font-size:10px;margin-top:2px;text-align:center}
-  .channel-card small,.channel-action{display:none}
-  .channel-card.email-card{grid-column:1/-1;flex-direction:row;align-items:center;padding:9px 10px;gap:8px}
-  .email-card>div:first-child{flex-direction:row;align-items:center;gap:8px}
-  .email-card strong{margin-top:0}
-  .email-form{margin-top:0;flex:1}
-
-  /* 뉴스 카드 — 모바일에서만 요약 텍스트 숨기고 높이 축소 */
+  .chan-btn{padding:0 11px}
+  .chan-btn .lbl{display:none}
+  .chan-email button{padding:0 12px}
   .news-grid{grid-template-columns:1fr}
   .news-card{min-height:auto;padding:14px}
   .news-card p{display:none}
   .card-top{margin-bottom:8px}
   .news-card h3{margin-bottom:0;font-size:14px}
   .card-foot{padding-top:10px}
-
   .main{padding-top:24px}
-
-  /* 검색 카드를 뉴스 목록보다 위로 (검색은 -1, 뉴스 본문은 1, 아카이브 2, 소개 3) */
   .main-grid{display:flex;flex-direction:column}
   .sidebar{display:contents}
   .search-card{order:-2}
@@ -193,7 +149,6 @@ footer{background:#07182F;color:white;padding:28px 0}
   .about-card{order:2}
 }
 </style>
-<!-- Logo source: approved horizontal logo extracted from the supplied brand board -->
 </head>
 <body>
 <header>
@@ -207,25 +162,22 @@ footer{background:#07182F;color:white;padding:28px 0}
 <section class="hero">
   <div class="shell hero-grid">
     <div>
-      <div class="live-badge">매일 오전 8시 자동 발행 · 월~금</div>
-      <h1>글로벌 OOH 시장의<br><span>뉴스와 인사이트를</span></h1>
-      <p class="hero-copy">주요 시장의 OOH·DOOH 뉴스와 캠페인 사례를 매일 선별해 한눈에 전합니다.</p>
+      <div class="live-badge">매주 월·수·금 오전 8시 발행</div>
+      <h1>글로벌 OOH <span>뉴스 &amp; 인사이트</span></h1>
       <div class="market-row"><div class="market-chip"><span class="market-code">KR</span>국내</div><div class="market-chip"><span class="market-code">US</span>미국</div><div class="market-chip"><span class="market-code">EU</span>유럽</div><div class="market-chip"><span class="market-code">ASIA</span>아시아</div></div>
     </div>
-
     <div class="follow-panel">
-      <div class="follow-head"><strong>OOH Insight LAB 구독하기</strong><span>세 채널을 동일한 방식으로 운영합니다</span></div>
-      <div class="channel-grid">
-        <a class="channel-card" href="https://www.facebook.com/profile.php?id=1147184798481215" target="_blank" rel="noreferrer">
-          <div><div class="channel-icon"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div><strong>Facebook</strong><small>뉴스와 사례 업데이트</small></div><div class="channel-action">팔로우하기 →</div>
+      <div class="follow-head"><strong>OOH Insight LAB 구독하기</strong></div>
+      <div class="channel-row">
+        <a class="chan-btn" href="https://www.facebook.com/profile.php?id=1147184798481215" target="_blank" rel="noreferrer" aria-label="Facebook 팔로우">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span class="lbl">Facebook</span>
         </a>
-        <a class="channel-card" href="https://www.linkedin.com/company/133455601" target="_blank" rel="noreferrer">
-          <div><div class="channel-icon"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></div><strong>LinkedIn</strong><small>산업 인사이트와 리포트</small></div><div class="channel-action">팔로우하기 →</div>
+        <a class="chan-btn" href="https://www.linkedin.com/company/133455601" target="_blank" rel="noreferrer" aria-label="LinkedIn 팔로우">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+          <span class="lbl">LinkedIn</span>
         </a>
-        <div class="channel-card email-card">
-          <div><div class="channel-icon">✉</div><strong>Email</strong><small>평일 아침 핵심 뉴스 요약</small></div>
-          <form class="email-form" onsubmit="handleSubscribe(event)"><input type="email" placeholder="이메일 주소" required><button>구독</button></form>
-        </div>
+        <form class="chan-email" onsubmit="handleSubscribe(event)"><input type="email" placeholder="이메일 구독" required><button>구독</button></form>
       </div>
     </div>
   </div>
@@ -237,33 +189,28 @@ footer{background:#07182F;color:white;padding:28px 0}
       <div class="section-head"><div class="section-title"><h2 id="date-label">오늘의 뉴스</h2><p>주요 시장의 최신 OOH/DOOH 이슈를 선별했습니다.</p></div><span class="auto-tag">자동 업데이트</span></div>
       <div class="news-grid" id="news-grid"><div class="no-news">뉴스를 불러오는 중...</div></div>
     </section>
-
     <aside class="sidebar">
       <section class="side-card search-card">
         <div class="side-head"><h3>뉴스 검색</h3><span>키워드·출처·태그</span></div>
         <div class="search-box"><svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="news-search" type="search" placeholder="예: DOOH, 규제, 미국" oninput="applyFilters()"></div>
         <div class="region-btns">
-          <button class="rfilter-btn active" data-region="all" onclick="setRegion('all',this)"><span class="market-code">ALL</span> 전체 <span class="rcount" id="cnt-all">0</span></button>
-          <button class="rfilter-btn" data-region="kr" onclick="setRegion('kr',this)"><span class="market-code">KR</span> 국내 <span class="rcount" id="cnt-kr">0</span></button>
-          <button class="rfilter-btn" data-region="us" onclick="setRegion('us',this)"><span class="market-code">US</span> 미국 <span class="rcount" id="cnt-us">0</span></button>
-          <button class="rfilter-btn" data-region="eu" onclick="setRegion('eu',this)"><span class="market-code">EU</span> 유럽 <span class="rcount" id="cnt-eu">0</span></button>
-          <button class="rfilter-btn" data-region="asia" onclick="setRegion('asia',this)"><span class="market-code">ASIA</span> 아시아 <span class="rcount" id="cnt-asia">0</span></button>
+          <button class="rfilter-btn active" data-region="all" onclick="setRegion('all',this)">전체</button>
+          <button class="rfilter-btn" data-region="kr" onclick="setRegion('kr',this)">국내</button>
+          <button class="rfilter-btn" data-region="us" onclick="setRegion('us',this)">미국</button>
+          <button class="rfilter-btn" data-region="eu" onclick="setRegion('eu',this)">유럽</button>
+          <button class="rfilter-btn" data-region="asia" onclick="setRegion('asia',this)">아시아</button>
         </div>
       </section>
-
       <section class="side-card" id="archive">
         <div class="side-head"><h3>뉴스 아카이브</h3><span>일자별 탐색</span></div>
-        <div class="archive-links" id="archive-dates">
-          <div class="archive-empty">아카이브를 불러오는 중...</div>
-        </div>
+        <div id="archive-dates"><div class="archive-empty">아카이브를 불러오는 중...</div></div>
       </section>
-
       <section class="side-card about-card" id="about"><h3>About OOH Insight LAB</h3><p>OOH 업계 실무자가 만드는 글로벌 옥외광고 인사이트 플랫폼입니다. AI가 40여 개 소스를 모니터링하고, 실무 관점에서 핵심 정보를 정리합니다.</p></section>
     </aside>
   </div>
 </main>
 
-<footer><div class="shell footer-inner"><a class="footer-logo" href="#"><img src="logo.png" alt="OOH Insight LAB"></a><div class="footer-links"><a href="https://www.facebook.com/profile.php?id=1147184798481215">Facebook</a><a href="https://www.linkedin.com/company/133455601">LinkedIn</a><a href="mailto:gon2800@gmail.com">문의하기</a></div><p class="footer-copy">© 2026 OOH Insight LAB · Powered by Gemini AI · 매일 오전 8시 자동 발행</p></div></footer>
+<footer><div class="shell footer-inner"><a class="footer-logo" href="#"><img src="logo.png" alt="OOH Insight LAB"></a><div class="footer-links"><a href="https://www.facebook.com/profile.php?id=1147184798481215">Facebook</a><a href="https://www.linkedin.com/company/133455601">LinkedIn</a><a href="mailto:gon2800@gmail.com">문의하기</a></div><p class="footer-copy">© 2026 OOH Insight LAB · Powered by Gemini AI · 매주 월·수·금 오전 8시 발행</p></div></footer>
 
 <script>
 const SAMPLE=[
@@ -274,17 +221,16 @@ const SAMPLE=[
 {region:'asia',regionLabel:'아시아',source:'Liveboard',title:'주식회사 LIVE BOARD 임원 임명 및 인사 공지',summary:'LIVE BOARD가 조직 강화를 위한 새로운 임원진을 발표했습니다.',tags:['Liveboard','일본OOH'],url:'#'},
 {region:'us',regionLabel:'미국',source:'DPAA',title:'BackLite UK, 치스윅 타워에 랜드마크 디지털 사이니지 설치',summary:'프리미엄 OOH 운영사 BackLite가 런던 치스윅 타워에 대형 디지털 사이니지를 설치했습니다.',tags:['DOOH','옥외광고'],url:'#'}];
 const RC={kr:'r-kr',us:'r-us',eu:'r-eu',asia:'r-asia'};let allNews=[],activeRegion='all';
-function updateCounts(items){document.getElementById('cnt-all').textContent=items.length;['kr','us','eu','asia'].forEach(r=>document.getElementById('cnt-'+r).textContent=items.filter(n=>n.region===r).length)}
-function renderNews(items){const grid=document.getElementById('news-grid');if(!items.length){grid.innerHTML='<div class="no-news">조건에 맞는 뉴스가 없습니다.</div>';return}grid.innerHTML=items.map(n=>`<a href="${n.url||'#'}" target="_blank" class="news-card"><div class="card-top"><span class="rbadge ${RC[n.region]||'r-kr'}">${n.regionLabel}</span><span class="csource">${n.source}</span></div><h3>${n.title}</h3><p>${n.summary}</p><div class="card-foot"><div class="ctags">${(n.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join('')}</div><span class="read-arrow">→</span></div></a>`).join('')}
+function renderNews(items){const grid=document.getElementById('news-grid');if(!items.length){grid.innerHTML='<div class="no-news">조건에 맞는 뉴스가 없습니다.</div>';return}grid.innerHTML=items.map(n=>`<a href="${n.url||'#'}" target="_blank" class="news-card"><div class="card-top"><span class="rbadge ${RC[n.region]||'r-kr'}">${n.regionLabel}</span><span class="csource">${n.source}</span></div><h3>${n.title}</h3><p>${n.summary}</p><div class="card-foot"><div class="ctags">${(n.tags||[]).slice(0,3).map(t=>`<span class="tag">#${t}</span>`).join('')}</div><span class="read-arrow">→</span></div></a>`).join('')}
 function applyFilters(){const q=(document.getElementById('news-search').value||'').trim().toLowerCase();let items=activeRegion==='all'?allNews:allNews.filter(n=>n.region===activeRegion);if(q)items=items.filter(n=>[n.title,n.summary,n.source,...(n.tags||[])].join(' ').toLowerCase().includes(q));renderNews(items)}
 function setRegion(region,btn){activeRegion=region;document.querySelectorAll('.rfilter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');applyFilters()}
 const API='https://ooh-news-data.gon2800.workers.dev';
 function fmtDate(iso){if(!iso)return new Date().toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric',weekday:'long'});const d=new Date(iso+'T00:00:00');return d.toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric',weekday:'long'})}
-function setNews(items,dateIso){allNews=Array.isArray(items)?items:[];document.getElementById('date-label').textContent=fmtDate(dateIso)+' 뉴스';updateCounts(allNews);applyFilters()}
+function setNews(items,dateIso){allNews=Array.isArray(items)?items:[];document.getElementById('date-label').textContent=fmtDate(dateIso)+' 뉴스';applyFilters()}
 async function loadNews(){try{const r=await fetch(API+'/latest?t='+Date.now());const data=r.ok?await r.json():null;if(data&&Array.isArray(data.items)&&data.items.length){setNews(data.items,data.date)}else{setNews(SAMPLE,null)}}catch{setNews(SAMPLE,null)}}
-async function loadArchiveDates(){const box=document.getElementById('archive-dates');try{const r=await fetch(API+'/dates?t='+Date.now());const dates=r.ok?await r.json():[];if(!Array.isArray(dates)||!dates.length){box.innerHTML='<div class="archive-empty">아직 쌓인 아카이브가 없습니다.<br>매일 오전 8시 이후 자동으로 추가됩니다.</div>';return}
-box.innerHTML=dates.map((d,i)=>{const dd=new Date(d+'T00:00:00');const label=dd.toLocaleDateString('ko-KR',{month:'long',day:'numeric',weekday:'short'});const year=dd.getFullYear();return `<button type="button" class="archive-link${i===0?' active-date':''}" data-date="${d}" onclick="loadDate('${d}',this)"><span class="aicon">📅</span><span class="archive-info"><strong>${label}</strong><span>${year}${i===0?' · 최신':''}</span></span><span class="aarrow">→</span></button>`}).join('')}catch{box.innerHTML='<div class="archive-empty">아카이브를 불러오지 못했습니다.</div>'}}
-async function loadDate(date,btn){try{const r=await fetch(API+'/news?date='+date);if(!r.ok)return;const data=await r.json();document.querySelectorAll('#archive-dates .archive-link').forEach(b=>b.classList.remove('active-date'));if(btn)btn.classList.add('active-date');setNews(data.items,data.date);window.scrollTo({top:document.getElementById('date-label').offsetTop-90,behavior:'smooth'})}catch{}}
+async function loadArchiveDates(){const box=document.getElementById('archive-dates');try{const r=await fetch(API+'/dates?t='+Date.now());const dates=r.ok?await r.json():[];if(!Array.isArray(dates)||!dates.length){box.innerHTML='<div class="archive-empty">아직 쌓인 아카이브가 없습니다.<br>월·수·금 오전 8시 이후 자동으로 추가됩니다.</div>';return}
+box.innerHTML='<select class="archive-select" aria-label="아카이브 날짜 선택" onchange="if(this.value)loadDate(this.value)">'+dates.map((d,i)=>{const dd=new Date(d+'T00:00:00');const label=dd.toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric',weekday:'short'});return `<option value="${d}">${label}${i===0?' · 최신':''}</option>`}).join('')+'</select>'}catch{box.innerHTML='<div class="archive-empty">아카이브를 불러오지 못했습니다.</div>'}}
+async function loadDate(date){try{const r=await fetch(API+'/news?date='+date);if(!r.ok)return;const data=await r.json();setNews(data.items,data.date);window.scrollTo({top:document.getElementById('date-label').offsetTop-90,behavior:'smooth'})}catch{}}
 async function handleSubscribe(e){e.preventDefault();const btn=e.target.querySelector('button');const input=e.target.querySelector('input');const email=input.value;btn.textContent='신청 중...';btn.disabled=true;try{const res=await fetch('https://ooh-subscribe.gon2800.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});const data=await res.json();if(data.success){alert('✅ 구독 신청이 완료되었습니다!\n\n검토 후 뉴스레터를 발송해 드립니다.');e.target.reset();}else{alert('❌ '+data.message);}}catch(err){alert('❌ 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');}finally{btn.textContent='구독';btn.disabled=false;}}
 loadNews();loadArchiveDates();
 </script>
