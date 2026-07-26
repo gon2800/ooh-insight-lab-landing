@@ -103,6 +103,11 @@ header{height:72px;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);b
 .auto-tag{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;padding:6px 9px;background:#E9F9F4;color:#058A65;border-radius:999px;font-size:10px;font-weight:750}
 .auto-tag:before{content:"";width:6px;height:6px;background:var(--green);border-radius:50%}
 .news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.news-section{margin-bottom:24px}
+.region-heading{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin-bottom:12px}
+.rh-dot{width:9px;height:9px;border-radius:3px;flex:0 0 auto}
+.rh-kr{background:#1760B8}.rh-us{background:#087953}.rh-eu{background:#A85B17}.rh-asia{background:#6840B7}
+.rh-count{font-size:11px;font-weight:700;color:#8A94A6;background:#F1F3F7;border-radius:999px;padding:2px 8px}
 .news-card{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;min-height:200px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:.22s}
 .news-card:before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,var(--blue),var(--green));opacity:0;transition:.22s}
 .news-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#D6DDEA}
@@ -206,7 +211,7 @@ footer{background:#07182F;color:white;padding:28px 0}
   <div class="shell">
     <section id="main-news-section">
       <div class="section-head"><div class="section-title"><h2 id="date-label">오늘의 뉴스</h2><p>주요 시장의 최신 OOH/DOOH 이슈를 선별했습니다.</p></div><span class="auto-tag">자동 업데이트</span></div>
-      <div class="news-grid" id="news-grid"><div class="no-news">뉴스를 불러오는 중...</div></div>
+      <div id="news-body"><div class="no-news">뉴스를 불러오는 중...</div></div>
     </section>
     <section class="about-card" id="about"><h3>About OOH Insight LAB</h3><p>OOH 업계 실무자가 만드는 글로벌 옥외광고 인사이트 플랫폼입니다. AI가 40여 개 소스를 모니터링하고, 실무 관점에서 핵심 정보를 정리해 매주 월·수·금 아침에 전합니다.</p></section>
   </div>
@@ -223,7 +228,9 @@ const SAMPLE=[
 {region:'asia',regionLabel:'아시아',source:'Liveboard',title:'주식회사 LIVE BOARD 임원 임명 및 인사 공지',summary:'LIVE BOARD가 조직 강화를 위한 새로운 임원진을 발표했습니다.',tags:['Liveboard','일본OOH'],url:'#'},
 {region:'us',regionLabel:'미국',source:'DPAA',title:'BackLite UK, 치스윅 타워에 랜드마크 디지털 사이니지 설치',summary:'프리미엄 OOH 운영사 BackLite가 런던 치스윅 타워에 대형 디지털 사이니지를 설치했습니다.',tags:['DOOH','옥외광고'],url:'#'}];
 const RC={kr:'r-kr',us:'r-us',eu:'r-eu',asia:'r-asia'};let allNews=[],activeRegion='all';
-function renderNews(items){const grid=document.getElementById('news-grid');if(!items.length){grid.innerHTML='<div class="no-news">조건에 맞는 뉴스가 없습니다.</div>';return}grid.innerHTML=items.map(n=>`<a href="${n.url||'#'}" target="_blank" class="news-card"><div class="card-top"><span class="rbadge ${RC[n.region]||'r-kr'}">${n.regionLabel}</span><span class="csource">${n.source}</span></div><h3>${n.title}</h3><p>${n.summary}</p><div class="card-foot"><div class="ctags">${(n.tags||[]).slice(0,3).map(t=>`<span class="tag">#${t}</span>`).join('')}</div><span class="read-arrow">→</span></div></a>`).join('')}
+function cardHTML(n){return `<a href="${n.url||'#'}" target="_blank" class="news-card"><div class="card-top"><span class="csource">${n.source}</span></div><h3>${n.title}</h3><p>${n.summary}</p><div class="card-foot"><div class="ctags">${(n.tags||[]).slice(0,3).map(t=>`<span class="tag">#${t}</span>`).join('')}</div><span class="read-arrow">→</span></div></a>`}
+const REG_ORDER=[['kr','국내'],['us','미국'],['eu','유럽'],['asia','아시아']];const REG_KNOWN=new Set(['kr','us','eu','asia']);
+function renderNews(items){const box=document.getElementById('news-body');if(!items.length){box.innerHTML='<div class="no-news">조건에 맞는 뉴스가 없습니다.</div>';return}let html='';for(const [rk,rlabel] of REG_ORDER){const list=items.filter(n=>n.region===rk);if(!list.length)continue;html+=`<section class="news-section"><div class="region-heading"><span class="rh-dot rh-${rk}"></span>${rlabel}<span class="rh-count">${list.length}</span></div><div class="news-grid">${list.map(cardHTML).join('')}</div></section>`}const others=items.filter(n=>!REG_KNOWN.has(n.region));if(others.length){html+=`<section class="news-section"><div class="region-heading"><span class="rh-dot" style="background:#98A2B3"></span>기타<span class="rh-count">${others.length}</span></div><div class="news-grid">${others.map(cardHTML).join('')}</div></section>`}box.innerHTML=html}
 function applyFilters(){const q=(document.getElementById('news-search').value||'').trim().toLowerCase();let items=activeRegion==='all'?allNews:allNews.filter(n=>n.region===activeRegion);if(q)items=items.filter(n=>[n.title,n.summary,n.source,...(n.tags||[])].join(' ').toLowerCase().includes(q));renderNews(items)}
 function setRegion(region,btn){activeRegion=region;document.querySelectorAll('.rfilter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');applyFilters()}
 const API='https://ooh-news-data.gon2800.workers.dev';
